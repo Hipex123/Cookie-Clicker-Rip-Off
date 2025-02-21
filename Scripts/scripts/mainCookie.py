@@ -88,6 +88,7 @@ while running:
             for rect, building in zip(rects, buildings):
                 if rect.collidepoint(pygame.mouse.get_pos()):
                     if cookies >= building.cost:
+                        cookies -= building.cost
                         Cps = building.buy()
 
             for upgrade in upgrades:
